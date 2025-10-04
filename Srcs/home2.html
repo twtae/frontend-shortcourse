@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 id="number">Click button below!</h1>
+		<button id="add">add</button>
+		<p id="demo"></p>
+		<a href="/index.html">Go back to index</a>
+		<script>
+			document.getElementById("demo").innerHTML = "Hello World!";
+			document.getElementById("add").addEventListener("click", click);
+			let x = 0;
+			function click() {
+				console.log("You add number! " + x + " -> " + ++x);
+				document.getElementById("number").innerHTML = x;
+				if (x % 2 == 0) document.getElementById("number").style.color = "red";
+				else document.getElementById("number").style.color = "blue";
+				if (x == 10) alert("Now number is 10! So cool!");
+			}
+		</script>
+	</body>
+</html>
